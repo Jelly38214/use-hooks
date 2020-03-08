@@ -1,5 +1,11 @@
 import { useCallback, useEffect, useRef } from "react";
 
+/**
+ * 
+ * @param {function} fn 
+ * @param {number} time 
+ * @returns {function} canceler
+ */
 export function useInterval(fn: Function, time: number) {
   const callback = useRef(fn);
   const timer = useRef(-1);
